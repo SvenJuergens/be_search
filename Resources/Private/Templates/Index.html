@@ -1,0 +1,34 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<f:layout name="Default" />
+
+<f:section name="main">
+    <h2>BE Full Search</h2>
+    <div class="excludeTables form-group">
+        Diese Tabellen werden nicht durchsucht:
+        <i>{excludeTables}</i>
+    </div>
+        <f:form method="post" action="index" name="beSearchForm" class="filterForm">
+            <div class="form-group">
+                <f:form.textfield
+                    placeholder="Search Word"
+                    class="form-control"
+                    name="sword"
+                    value=""
+                />
+            </div>
+            <div class="form-group">
+                <f:form.submit
+                    class="btn btn-default"
+                    value="Search All Records"
+                />
+            </div>
+        </f:form>
+        <f:if condition="{items}">
+            <f:format.raw>
+                {items}
+            </f:format.raw>
+        </f:if>
+</f:section>
