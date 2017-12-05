@@ -32,7 +32,7 @@ class BeSearchController extends ActionController
 
     protected $sword;
 
-    protected $excludeTables = 'sys_log,sys_history,tx_extensionmanager_domain_model_repository';
+    protected $excludeTables = 'sys_log,sys_history,tx_extensionmanager_domain_model_extension,tx_dmdeveloperlog_domain_model_logentry';
 
     /**
      * @var LanguageService
